@@ -1,5 +1,3 @@
-package tar_cal;
-
 public class Calculate {
     private Validation valid;
 

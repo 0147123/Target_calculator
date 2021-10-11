@@ -1,5 +1,3 @@
-package tar_cal;
-
 import java.util.Scanner;
 
 public class Interface {
