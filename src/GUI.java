@@ -16,11 +16,11 @@ public class GUI{
     private JTextField completeCredTField;
     private JTextField remainCredTField;
     private JButton calculateButton;
-    private Validation validation;
+    private DataStore validation;
 
 
     public GUI(){
-        validation = new Validation();
+        validation = new DataStore();
         panel = new JPanel();
         frame = new JFrame();
 
@@ -29,6 +29,7 @@ public class GUI{
         //this method should call after using setSize() method!!
         frame.setLocationRelativeTo(null);
         frame.add(panel);
+        frame.setResizable(false);
 
         panel.setLayout(null);
 

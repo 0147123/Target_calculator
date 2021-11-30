@@ -1,7 +1,7 @@
 public class Calculate {
-    private Validation valid;
+    private DataStore valid;
 
-    public Calculate(Validation valid){
+    public Calculate(DataStore valid){
         this.valid = valid;
     }
 
