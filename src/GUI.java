@@ -82,7 +82,10 @@ public class GUI{
 			DataPanel.add(displayLabel[i]);
 
 			//set format for inputTextField
-			inputTextField[i] = new RoundTextfield("Suitable Credit Range");
+            if (i <2)
+			    inputTextField[i] = new RoundTextfield("Range: 0-4.3");
+            else
+                inputTextField[i] = new RoundTextfield("Suitable Credit Range");
 			inputTextField[i].setOpaque(false);
 			inputTextField[i].setBounds(199, 24+i*58, 200, 25);
 			inputTextField[i].setBorder(BorderFactory.createEmptyBorder(0, 4, 0, 0));
@@ -166,7 +169,7 @@ public class GUI{
     private class Handler implements ActionListener{
         @Override
         public void actionPerformed(ActionEvent e) {
-            if(validation.checkCgpa(inputTextField[0].getText(), 1) && validation.checkCgpa(inputTextField[1].getText(), 2) 
+            if(validation.checkCgpa(inputTextField[0].getText(), 2) && validation.checkCgpa(inputTextField[1].getText(), 1) 
                && validation.checkCred(inputTextField[2].getText(), 1) && validation.checkCred(inputTextField[3].getText(), 2)){
                 Calculate calculate = new Calculate(validation);
                 JOptionPane.showConfirmDialog(null, calculate.tar(), "Calculate Result", 2);
